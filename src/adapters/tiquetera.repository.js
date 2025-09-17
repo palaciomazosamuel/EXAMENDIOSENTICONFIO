@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const Tiquetera = require('../domain/tiquetera');
-const { schema } = mongoose;
+const Tiquetera = require('../domain/tiquetera.model');
+const { Schema } = mongoose;
 
 const TiqueteraSchema = new Schema({
 
@@ -46,4 +46,4 @@ class TiqueteraRepository{
 
 } 
 
-module.exports = TiqueteraRepository()
+module.exports = new TiqueteraRepository()
